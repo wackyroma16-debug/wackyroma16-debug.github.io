@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Wacky Portfolio</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Segoe UI',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:linear-gradient(135deg,#020617,#0f172a);
+color:white;
+}
+
+/* NAVBAR */
+
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 10%;
+background:rgba(0,0,0,0.4);
+backdrop-filter:blur(10px);
+position:sticky;
+top:0;
+}
+
+nav h2{
+color:#38bdf8;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin-left:20px;
+font-weight:600;
+}
+
+nav a:hover{
+color:#38bdf8;
+}
+
+/* HERO */
+
+.hero{
+min-height:90vh;
+display:flex;
+align-items:center;
+justify-content:center;
+flex-wrap:wrap;
+gap:70px;
+padding:80px 10%;
+}
+
+.hero-text h1{
+font-size:50px;
+}
+
+.hero-text span{
+color:#38bdf8;
+}
+
+.hero-text p{
+margin-top:10px;
+font-size:18px;
+opacity:0.9;
+}
+
+.hero-buttons{
+margin-top:25px;
+}
+
+.btn{
+padding:12px 25px;
+border:none;
+border-radius:6px;
+cursor:pointer;
+margin-right:10px;
+font-weight:bold;
+}
+
+.btn-primary{
+background:#38bdf8;
+color:black;
+}
+
+.btn-outline{
+border:2px solid #38bdf8;
+background:none;
+color:white;
+}
+
+.btn:hover{
+transform:scale(1.05);
+}
+
+/* PROFILE */
+
+.profile img{
+width:260px;
+height:260px;
+border-radius:50%;
+border:6px solid #38bdf8;
+object-fit:cover;
+}
+
+/* SECTION */
+
+section{
+padding:80px 10%;
+}
+
+.section-title{
+text-align:center;
+font-size:34px;
+margin-bottom:40px;
+}
+
+/* ABOUT */
+
+.about{
+max-width:700px;
+margin:auto;
+text-align:center;
+line-height:1.7;
+opacity:0.9;
+}
+
+/* SKILLS */
+
+.skills{
+max-width:600px;
+margin:auto;
+}
+
+.skill{
+margin-bottom:20px;
+}
+
+.bar{
+width:100%;
+height:10px;
+background:#1e293b;
+border-radius:5px;
+}
+
+.progress{
+height:10px;
+background:#38bdf8;
+border-radius:5px;
+}
+
+/* PROJECTS */
+
+.projects{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:30px;
+}
+
+.project{
+background:rgba(255,255,255,0.05);
+padding:25px;
+border-radius:10px;
+backdrop-filter:blur(8px);
+transition:0.3s;
+}
+
+.project:hover{
+transform:translateY(-10px);
+}
+
+.project button{
+margin-top:15px;
+padding:10px 20px;
+background:#38bdf8;
+border:none;
+border-radius:6px;
+font-weight:bold;
+cursor:pointer;
+}
+
+/* CONTACT */
+
+.contact{
+text-align:center;
+}
+
+.contact-item{
+margin-top:15px;
+font-size:18px;
+}
+
+.contact a{
+color:white;
+text-decoration:none;
+}
+
+.contact a:hover{
+color:#38bdf8;
+}
+
+.contact i{
+margin-right:10px;
+}
+
+/* FOOTER */
+
+footer{
+text-align:center;
+padding:20px;
+background:#020617;
+margin-top:40px;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav>
+
+<h2>Wacky Roma</h2>
+
+<div>
+
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#skills">Skills</a>
+<a href="#projects">Projects</a>
+<a href="#contact">Contact</a>
+
+</div>
+
+</nav>
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+
+<div class="hero-text">
+
+<h1>Hello I'm <span>Wacky</span></h1>
+
+<p id="typing"></p>
+
+<div class="hero-buttons">
+
+<button class="btn btn-primary" onclick="document.getElementById('projects').scrollIntoView()">
+View Projects
+</button>
+
+<button class="btn btn-outline" onclick="document.getElementById('contact').scrollIntoView()">
+Contact Me
+</button>
+
+</div>
+
+</div>
+
+<div class="profile">
+
+<img src="profile.jpg">
+
+</div>
+
+</section>
+
+<!-- ABOUT -->
+
+<section id="about">
+
+<h2 class="section-title">About Me</h2>
+
+<p class="about">
+
+ I am an IT student who is passionate about
+        technology, programming, and web development. I enjoy learning new programming
+        languages and building projects that improve my skills.
+
+</p>
+
+</section>
+
+<!-- SKILLS -->
+
+<section id="skills">
+
+<h2 class="section-title">Skills</h2>
+
+<div class="skills">
+
+<div class="skill">
+<p>Visual Studio</p>
+<div class="bar"><div class="progress" style="width:90%"></div></div>
+</div>
+
+<div class="skill">
+<p>Xamp</p>
+<div class="bar"><div class="progress" style="width:85%"></div></div>
+</div>
+
+<div class="skill">
+<p>C++</p>
+<div class="bar"><div class="progress" style="width:95%"></div></div>
+</div>
+
+<div class="skill">
+<p>PHP</p>
+<div class="bar"><div class="progress" style="width:80%"></div></div>
+</div>
+
+<div class="skill">
+<p>JavaScript</p>
+<div class="bar"><div class="progress" style="width:90%"></div></div>
+</div>
+
+</div>
+
+</section>
+
+<!-- PROJECTS -->
+
+<section id="projects">
+
+<h2 class="section-title">Projects</h2>
+
+<div class="projects">
+
+<div class="project">
+
+<h3>Payroll Management System</h3>
+
+<p>
+A web-based payroll system that calculates employee salaries and attendance.
+</p>
+
+<button>View Project</button>
+
+</div>
+
+<div class="project">
+
+<h3>Enhanced Employee Appraissal System</h3>
+
+<p>
+System used for Employee Aprraisal.
+</p>
+
+<button>View Project</button>
+
+</div>
+
+<div class="project">
+
+<h3>Student Record System</h3>
+
+<p>
+Database system for managing student records and information.
+</p>
+
+<button>View Project</button>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section id="contact">
+
+<h2 class="section-title">Contact</h2>
+
+<div class="contact">
+
+<div class="contact-item">
+
+<a href="mailto:wackyroma16@gmail.com">
+
+<i class="fa-solid fa-envelope"></i>
+wackyroma16@gmail.com
+
+</a>
+
+</div>
+
+<div class="contact-item">
+
+<a href="https://github.com/wackyroma16-debug/wackyroma16-debug.github.io" target="_blank">
+
+<i class="fa-brands fa-github"></i>
+GitHub Repository
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+<p>© 2026 Wacky Portfolio</p>
+
+</footer>
+
+<script>
+
+const text = "IT Student | Web Developer | Analytics";
+let i = 0;
+
+function typing(){
+if(i < text.length){
+document.getElementById("typing").innerHTML += text.charAt(i);
+i++;
+setTimeout(typing,50);
+}
+}
+
+typing();
+
+</script>
+
+</body>
+</html>
